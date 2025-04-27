@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harshit Gupta</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Timeline styles */
+    .timeline {
+      position: relative;
+      padding: 10px 0;
+      max-width: 100%;
+      margin-top: 50px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background-color: #ddd;
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      position: relative;
+      margin: 20px 0;
+      padding-left: 50%;
+    }
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      top: 15px;
+      right: -15px;
+      width: 30px;
+      height: 30px;
+      background-color: #4caf50;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+    .timeline-item-content {
+      position: relative;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 50%;
+      text-align: left;
+    }
+    .timeline-item-content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .timeline-item-content p {
+      font-size: 1rem;
+      color: #666;
+    }
+    .timeline-item:nth-child(even) {
+      padding-left: 0;
+      padding-right: 50%;
+    }
+    .timeline-item:nth-child(even) .timeline-item-content {
+      padding-left: 20px;
+      text-align: right;
+    }
+    .timeline-item:nth-child(even)::after {
+      right: auto;
+      left: -15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Home Section -->
+    <div class="section active" id="home">
+      <div class="profile">
+        <img src="images/Harshit.jpg" alt="Profile Picture">
+      </div>
+      <div class="intro">
+        <h1>Hi, I'm Harshit</h1>
+        <p>Building Smart & Scalable Solutions</p>
+        <p>Cloud & AI Engineer | DevOps | Scalable Architectures</p>
+      </div>
+    </div>
+    
+    <div class="container">
+      <!-- LinkedIn, GitHub, and Dark Theme Toggle -->
+      <div class="top-buttons">
+        <a href="https://www.linkedin.com/in/harshit-gupta-407857329/" target="_blank" class="social-icon" id="linkedin">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/cl0ud08" target="_blank" class="social-icon" id="github">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+   <!-- About Section -->
+<div class="section hidden" id="about">
+  <div class="about-content">
+    <h2>About Me</h2>
+    <div class="about-grid">
+      <div><strong>Job:</strong> Cloud & AI Engineer</div>
+      <div><strong>Degree:</strong> B.Tech in Computer Science Engineering</div>
+      <div><strong>Address:</strong> Alwar, Rajasthan, India</div>
+      <div><strong>Phone:</strong> +91 9350530047</div>
+      <div><strong>Experience:</strong> 4 Years</div>
+      <div><strong>Email:</strong> harshit.105418@gmail.com</div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Skills Section -->
+<div class="section hidden" id="skills">
+  <div class="skills-content">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">
+        <div class="skill-name">HTML</div>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" style="width: 90%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">CSS</div>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" style="width: 85%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">JavaScript</div>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" style="width: 75%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">React</div>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" style="width: 70%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">Node.js</div>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" style="width: 65%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">Cloud Computing</div>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" style="width: 80%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">AI/ML</div>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" style="width: 70%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">DevOps</div>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" style="width: 75%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">AWS</div>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" style="width: 85%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <!-- Projects Section -->
+<div class="section hidden" id="projects">
+  <div class="projects-content">
+    <h2>My Projects</h2>
+    <div class="projects-column">
+      <!-- Project 1 -->
+      <div class="project project-1">
+        <h3>Project 1: Streamlit Visualization</h3>
+        <p>A Streamlit-based app that provides interactive data visualizations for real-time insights and analysis.</p>
+        <a href="https://github.com/cl0ud08/Math-visualization">View Project</a>
+      </div>
+      <!-- Project 2 -->
+      <div class="project project-2">
+        <h3>Project 2: Docker Mysql</h3>
+        <p>A Dockerized MySQL setup that simplifies database deployment and management in containerized environments</p>
+        <a href="https://github.com/cl0ud08/Docker_Experiment/tree/main/4.Docker_Mysql">View Project</a>
+      </div>
+      <!-- Project 3 -->
+      <div class="project project-3">
+        <h3>Project 3: Docker Volume</h3>
+        <p>A Docker volume management system that streamlines data storage and persistence across containers.</p>
+        <a href="https://github.com/cl0ud08/Docker_Experiment/tree/main/7.Docker_volume/Docker_volume">View Project</a>
+      </div>
+      <!-- Project 4 -->
+      <div class="project project-4">
+        <h3>Project 4: Ai Crypto Prediction</h3>
+        <p>An AI-powered platform that uses machine learning algorithms to predict cryptocurrency price trends and assist in informed trading decisions.</p>
+        <a href="https://github.com/cl0ud08/ai_crypto_forecast">View Project</a>
+      </div>
+      <!-- Project 5 -->
+      <div class="project project-5">
+        <h3>Project 5: Traffic Route Optimizer</h3>
+        <p>A traffic route optimizer using AI to find the fastest and most efficient routes in real-time.</p>
+        <a href="https://github.com/cl0ud08/traffic-route-frontend">View Project</a>
+      </div>
+      <!-- Project 6 -->
+      <div class="project project-6">
+        <h3>Project 6: Dsa Blog</h3>
+        <p>A blog that explores data structures and algorithms, providing tutorials, insights, and solutions to enhance coding skills.</p>
+        <a href="https://cl0ud08.github.io/Harshit-blog/">View Project</a>
+      </div>
+      <!-- Project 7 -->
+      <div class="project project-7">
+        <h3>Project 7: Aws Cost Calculator</h3>
+        <p>An AWS cost calculator that helps estimate and optimize cloud service expenses based on usage and resources.</p>
+        <a href="https://github.com/cl0ud08/aws-cost-calculator">View Project</a>
+      </div>
+      <!-- Project 8 -->
+      <div class="project project-8">
+        <h3>Project 8: Titanic Project</h3>
+        <p>An AI-powered Titanic survival prediction model that analyzes passenger data to predict the likelihood of survival.</p>
+        <a href="https://github.com/cl0ud08/Capstone_Project/blob/main/TITANIC_DATASET.ipynb">View Project</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Qualifications Section -->
+    <div class="section hidden" id="qualification">
+      <div class="qualification-content">
+        <h2>My Qualifications</h2>
+        <div class="timeline">
+          <!-- Timeline Item 1 (School Journey) -->
+          <div class="timeline-item">
+            <div class="timeline-item-content">
+              <h3>Completed Schooling</h3>
+              <p>Graduated from National Academy, Alwar, Rajasthan, in 2021 with a strong academic background and passion for technology.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 (College Journey) -->
+          <div class="timeline-item">
+            <div class="timeline-item-content">
+              <h3>Pursuing B.Tech</h3>
+              <p>Currently pursuing B.Tech in Computer Science Engineering with a specialization in Cloud Computing, expected to graduate in 2026.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resume Section -->
+    <div class="section hidden" id="resume">
+      <div class="resume-content">
+        <h2>My Resume</h2>
+        <p>Download my resume below to learn more about my professional journey and experience.</p>
+        <a href="Images/Resume.pdf" class="resume-btn" download>
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+      </div>
+    </div>
+    
+
+    <!-- Menu -->
+    <div class="menu">
+      <div class="menu-item" onclick="showSection('home')">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </div>
+      <div class="menu-item" onclick="showSection('about')">
+        <i class="fas fa-user"></i>
+        <span>About</span>
+      </div>
+      <div class="menu-item" onclick="showSection('skills')">
+        <i class="fas fa-code"></i>
+        <span>Skills</span>
+      </div>
+      <div class="menu-item" onclick="showSection('projects')">
+        <i class="fas fa-briefcase"></i>
+        <span>Projects</span>
+      </div>
+      <!-- Qualifications Menu Item -->
+      <div class="menu-item" onclick="showSection('qualification')">
+        <i class="fas fa-graduation-cap"></i>
+        <span>Qualifications</span>
+      </div>
+      <!-- Resume Menu Item -->
+      <div class="menu-item" onclick="showSection('resume')">
+        <i class="fas fa-file-alt"></i>
+        <span>Resume</span>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body

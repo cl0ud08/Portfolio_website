@@ -9,7 +9,7 @@ body {
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
   background: #ffffff;
-  color: #011936;  /* Deep blue text color */
+  color: #011936;
   overflow-x: hidden;
   scroll-behavior: smooth;
   display: flex;
@@ -43,7 +43,7 @@ body {
   height: 140px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #011936;  /* Deep blue border */
+  border: 4px solid #011936;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.4s ease;
 }
@@ -68,23 +68,14 @@ body {
   text-align: center;
   transition: transform 0.7s ease;
   visibility: hidden;
+  opacity: 0;
   overflow-y: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-}
-
-.section::-webkit-scrollbar {
-  display: none;
-}
-
-.section.hidden {
-  transform: translateX(100%);
-  visibility: hidden;
 }
 
 .section.active {
-  transform: translateX(0);
   visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
   animation: fadeIn 1s ease;
 }
 
@@ -101,78 +92,78 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px 20px; /* Added padding for spacing */
-  max-width: 800px; /* Limiting width for better readability */
-  margin: 0 auto; /* Centering the content */
-  background: #ffffff; /* White background for intro */
-  border-radius: 15px; /* Smooth rounded corners */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for a clean look */
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Transition for smooth effects */
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .intro h1 {
-  font-size: 3.6rem; /* Slightly larger font size for a stronger impact */
-  color: #011936;  /* Deep blue color for headings */
-  margin-bottom: 15px; /* Slightly more space below the heading */
-  font-weight: bold; /* Make the name stand out */
-  letter-spacing: 2px; /* Add space between letters for better readability */
+  font-size: 3.6rem;
+  color: #011936;
+  margin-bottom: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .intro p {
-  font-size: 1.6rem; /* Increased font size for better visibility */
-  color: #444444;  /* Dark grey for text */
-  margin-bottom: 12px; /* Added space between paragraphs */
-  line-height: 1.6; /* Improved line spacing for readability */
+  font-size: 1.6rem;
+  color: #444444;
+  margin-bottom: 12px;
+  line-height: 1.6;
 }
 
 .intro p:last-child {
-  font-weight: 300; /* Lighter weight for the last paragraph */
-  color: #666; /* Slightly lighter grey for emphasis */
+  font-weight: 300;
+  color: #666;
 }
 
-/* Hover effect for intro */
 .intro:hover {
-  transform: translateY(-5px); /* Subtle hover effect */
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .intro {
-    padding: 20px 15px; /* Adjust padding for smaller screens */
-    max-width: 95%; /* Allow more width on smaller screens */
+    padding: 20px 15px;
+    max-width: 95%;
   }
 
   .intro h1 {
-    font-size: 2.8rem; /* Adjust heading size for mobile */
+    font-size: 2.8rem;
   }
 
   .intro p {
-    font-size: 1.4rem; /* Adjust paragraph size for mobile */
+    font-size: 1.4rem;
   }
 }
 
 @media (max-width: 480px) {
   .intro {
-    padding: 15px 10px; /* Further adjust padding for very small screens */
+    padding: 15px 10px;
   }
 
   .intro h1 {
-    font-size: 2.4rem; /* Make the heading smaller on very small screens */
+    font-size: 2.4rem;
   }
 
   .intro p {
-    font-size: 1.3rem; /* Adjust text size further for small screens */
+    font-size: 1.3rem;
   }
 }
+
 /* About and Skills Sections */
 .about-content, .skills-content {
   width: 90%;
   max-width: 850px;
-  background: #f4f9fc;  /* Light blue background to match the overall theme */
+  background: #f4f9fc;
   padding: 40px;
   border-radius: 20px;
-  border: 1px solid #cde7f8; /* Lighter blue border */
+  border: 1px solid #cde7f8;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -182,7 +173,7 @@ body {
 
 .about-content h2, .skills-content h2 {
   font-size: 2.5rem;
-  color: #003366; /* Deep blue to match portfolio headers */
+  color: #003366;
   margin-bottom: 20px;
   font-weight: 600;
   text-transform: uppercase;
@@ -197,11 +188,10 @@ body {
   left: 0;
   width: 60%;
   height: 3px;
-  background: #005f73;  /* Teal underline to add accent */
+  background: #005f73;
   border-radius: 5px;
 }
 
-/* About Grid */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -216,114 +206,146 @@ body {
   border-radius: 15px;
   transition: all 0.3s;
   font-size: 1.1rem;
-  color: #333333;  /* Dark gray text */
+  color: #333333;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-grid div:hover {
-  background: #cfe9f7;  /* Light blue background on hover */
+  background: #cfe9f7;
   transform: translateY(-5px);
 }
+/* Skills Section Wrapper */
+.skills-content {
+  background-color: #f5f7fa;
+  padding: 60px 0;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+  margin-bottom: 60px;
+  transition: background-color 0.3s ease;
+}
 
-/* Skills Section */
+/* Skills Section Hover Effect */
+.skills-content:hover {
+  background-color: #e1f5fe;
+}
+
+/* Skill Grid */
 .skills-grid {
-  margin-top: 30px;
-  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 0 20px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 0 15px;
   box-sizing: border-box;
 }
 
-/* Skill Box */
+/* Individual Skill Card */
 .skill {
   background-color: #ffffff;
-  padding: 25px;
+  padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  /* Center align the content */
-  border: 2px solid #f0f4f8;  /* Soft light blue border */
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Hover Effect */
+/* Skill Hover Effects */
 .skill:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  background-color: #f9f9f9;
-  border-color: #006f97;  /* Highlighted blue border on hover */
+  transform: translateY(-10px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  background-color: #f8f9fa;
+  border-color: #1e88e5;
 }
 
 /* Skill Name */
 .skill-name {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  color: #003366;  /* Deep blue for consistency */
-  margin-bottom: 15px;
-  letter-spacing: 0.5px;
+  color: #1e88e5;
+  margin-bottom: 20px;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Skill Icon */
 .skill-icon {
-  font-size: 3rem;  /* Adjust the size of the icon */
-  color: #006f97;  /* Color for the icon */
-  margin-bottom: 15px;
+  font-size: 3.5rem;
+  color: #1e88e5;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
 }
 
-/* Progress Bar Container */
+.skill:hover .skill-icon {
+  transform: scale(1.1); /* Slight scale-up effect */
+}
+
+/* Progress Bar */
 .progress-bar {
-  background: #f0f4f8;
+  background: #e0e0e0;
   border-radius: 50px;
   overflow: hidden;
   width: 100%;
   height: 12px;
-  margin-top: 12px;
+  margin-top: 20px;
 }
 
-/* Progress Bar Fill */
 .progress-bar-fill {
   height: 100%;
-  background-color: #006f97;
-  width: 0;
+  background-color: #1e88e5;
+  width: 0; /* Default to 0% */
   border-radius: 50px;
-  transition: width 1.5s ease-out;
+  transition: width 1s ease-out;
 }
 
-/* Progress Bar Label */
 .progress-bar-label {
-  font-size: 0.9rem;
-  color: #6e6e6e;
+  font-size: 0.95rem;
+  color: #666;
   margin-top: 5px;
   text-align: right;
-  font-weight: 500;
 }
 
-/* Add smooth background transition for skill container */
-.skills-content {
-  background: linear-gradient(135deg, #f4f9fc, #ffffff);
-  padding: 40px 0;
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  text-align: center;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-  /* Mobile styles */
   .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
   }
 
   .skill-name {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .progress-bar {
     height: 10px;
+  }
+
+  .skill-icon {
+    font-size: 3rem;
+  }
+}
+
+/* For Smaller Mobile Screens */
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .skill-name {
+    font-size: 1.1rem;
+  }
+
+  .skill-icon {
+    font-size: 2.8rem;
+  }
+
+  .progress-bar {
+    height: 8px;
   }
 }
 
@@ -493,41 +515,59 @@ body {
   border-radius: 20px;
 }
 
-
-
 /* Resume Section */
 .resume-content {
   width: 100%;
-  max-width: 800px;
+  height: 100vh; /* Make sure it takes full viewport height */
+  max-width: 1000px;
   padding: 40px 30px;
   border: 1px solid #e0e0e0;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
   text-align: center;
-  background-color: #f4f4f4; /* Add background color */
-  background-image: url('Resume.jpg'); /* Optional: background image */
-  background-size: cover;
-  background-position: center;
-  color: #011936; /* Text color for better contrast */
+  background-color: rgba(244, 244, 244, 0.8); /* Slight background color for readability */
+  color: #011936; /* Text color for contrast */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.resume-content:hover {
-  transform: translateY(-5px);
-  transition: all 0.3s ease;
+/* Background Image with Blur */
+.resume-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/resume-background.jpg') center center / cover no-repeat;
+  z-index: -1; /* Keeps background behind content */
+  filter: blur(3px); /* Adds blur effect to the background */
+  opacity: 0.5; /* Adjust opacity for a subtle blur effect */
 }
 
+/* Resume Content Title */
 .resume-content h2 {
   font-size: 2.4rem;
   color: #011936;
   margin-bottom: 20px;
+  font-weight: bold;
+  z-index: 2;
 }
 
+/* Resume Content Paragraph */
 .resume-content p {
   font-size: 1.1rem;
   color: #555;
   margin-bottom: 30px;
+  z-index: 2;
 }
 
+/* Resume Button */
 .resume-btn {
   display: inline-block;
   padding: 12px 28px;
@@ -537,6 +577,7 @@ body {
   border-radius: 30px;
   text-decoration: none;
   transition: background 0.3s, transform 0.3s;
+  z-index: 2;
 }
 
 .resume-btn:hover {
@@ -546,6 +587,21 @@ body {
 
 .resume-btn i {
   margin-right: 8px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .resume-content {
+    padding: 20px;
+    max-width: 100%;
+    height: auto; /* Make sure it's not fixed height on small screens */
+  }
+  .resume-content h2 {
+    font-size: 2rem;
+  }
+  .resume-content p {
+    font-size: 1rem;
+  }
 }
 
 /* Mobile Responsiveness */
@@ -613,4 +669,157 @@ body.dark-theme .social-icon {
 
 body.dark-theme .social-icon:hover {
   color: #0077b5;
+}
+/* General Layout */
+.section {
+  padding: 40px;
+  background: #f4f9fc;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* About Section Heading */
+.about-content h2 {
+  font-size: 2.5rem;
+  color: #003366;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.about-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background: #005f73;
+  border-radius: 5px;
+}
+
+/* About Section Layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.intro {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.intro p {
+  margin-bottom: 20px;
+  max-width: 800px; /* Ensures the text does not stretch too much */
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2rem;
+}
+
+/* Technologies Section */
+.technologies {
+  margin-top: 40px;
+  width: 100%;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.technologies h3 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.tech-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Flexible grid with min-width of 180px */
+  gap: 20px;
+  justify-items: center;
+  width: 100%;
+}
+
+.tech-item {
+  background-color: #3498db;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;  /* Ensures the tech item stretches to fill available space */
+}
+
+.tech-item:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr; /* Stack the content vertically */
+    text-align: center;
+  }
+
+  .intro {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .technologies h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .technologies {
+    padding: 30px 20px;
+  }
+
+  .tech-item {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .technologies h3 {
+    font-size: 1.5rem;
+  }
+
+  .tech-item {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
 }
